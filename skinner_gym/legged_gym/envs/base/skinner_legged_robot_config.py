@@ -254,4 +254,4 @@ class SkinnerLeggedRobotCfgPPO(BaseConfig):
         checkpoint = -1 # -1 = last saved model
         resume_path = None # updated from load_run and chkpt
         # Algorithm computes action once every # walking_decimation times 
-        walking_decimation = 1
+        walking_decimation = 4
