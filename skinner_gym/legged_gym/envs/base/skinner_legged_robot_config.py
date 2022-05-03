@@ -48,7 +48,7 @@ class SkinnerLeggedRobotCfg(BaseConfig):
         num_actions = 12
         env_spacing = 3.  # not used with heightfields/trimeshes 
         send_timeouts = True # send time out information to the algorithm
-        episode_length_s = 40 # episode length in seconds
+        episode_length_s = 30 # episode length in seconds
 
     class terrain:
         mesh_type = 'plane' # "heightfield" # none, plane, heightfield or trimesh
@@ -141,7 +141,7 @@ class SkinnerLeggedRobotCfg(BaseConfig):
         class scales:
             termination = -0.0
             blue = 100.0
-            distance = 1.0
+            distance = 0.0
 
         only_positive_rewards = True # if true negative total rewards are clipped at zero (avoids early termination problems)
         tracking_sigma = 0.25 # tracking reward = exp(-error^2/sigma)
@@ -254,4 +254,4 @@ class SkinnerLeggedRobotCfgPPO(BaseConfig):
         checkpoint = -1 # -1 = last saved model
         resume_path = None # updated from load_run and chkpt
         # Algorithm computes action once every # walking_decimation times 
-        walking_decimation = 10
+        walking_decimation = 1
